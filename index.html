@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="mn">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+        name="description"
+        content="7-р ангийн Мэдээллийн технологийн онлайн шалгалт"
+    >
+
+    <meta
+        name="theme-color"
+        content="#2563eb"
+    >
+
+    <title>
+        7-р анги — Мэдээллийн технологийн шалгалт
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        💻 Мэдээллийн технологи
+    </div>
+
+    <div class="badge">
+        7-р анги · 10 асуулт
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- =========================
+         START SCREEN
+    ========================== -->
+
+    <section
+        id="startScreen"
+        class="card start-card"
+    >
+
+        <h1>
+            7-р ангийн онлайн шалгалт
+        </h1>
+
+        <p class="subtitle">
+            Мэдээллийн технологийн хичээл
+        </p>
+
+
+        <div class="notice">
+
+            <strong>Анхаар:</strong>
+
+            Нэр болон ангиа зөв сонгоно уу.
+            Шалгалтыг дуусгасны дараа таны
+            оноо шууд дэлгэц дээр харагдана.
+
+        </div>
+
+
+        <label for="studentName">
+            Сурагчийн нэр
+        </label>
+
+        <input
+            id="studentName"
+            type="text"
+            maxlength="80"
+            placeholder="Жишээ: Бат Болд"
+            autocomplete="name"
+        >
+
+
+        <label for="studentClass">
+            Анги
+        </label>
+
+        <select id="studentClass">
+
+            <option value="">
+                -- Анги сонгох --
+            </option>
+
+            <option value="7А">
+                7А
+            </option>
+
+            <option value="7Б">
+                7Б
+            </option>
+
+            <option value="7В">
+                7В
+            </option>
+
+            <option value="7Г">
+                7Г
+            </option>
+
+            <option value="7Д">
+                7Д
+            </option>
+
+            <option value="7Е">
+                7Е
+            </option>
+
+            <option value="7Ё">
+                7Ё
+            </option>
+
+            <option value="7Ж">
+                7Ж
+            </option>
+
+        </select>
+
+
+        <button
+            id="startBtn"
+            class="primary"
+            type="button"
+        >
+            Шалгалт эхлүүлэх
+        </button>
+
+
+        <p
+            id="startError"
+            class="error"
+        ></p>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUIZ SCREEN
+    ========================== -->
+
+    <section
+        id="quizScreen"
+        class="hidden"
+    >
+
+
+        <div class="quiz-head card">
+
+            <div>
+
+                <div class="small">
+                    Сурагч
+                </div>
+
+                <strong id="studentInfo"></strong>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                ⏱
+
+                <span id="timer">
+                    00:00
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="progress-wrap">
+
+            <div class="progress-text">
+
+                <span id="progressText">
+                    1 / 10
+                </span>
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    id="progressBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <form id="quizForm"></form>
+
+
+
+        <div class="actions">
+
+            <button
+                id="prevBtn"
+                type="button"
+                class="secondary"
+            >
+                ← Өмнөх
+            </button>
+
+
+            <button
+                id="nextBtn"
+                type="button"
+                class="primary"
+            >
+                Дараагийн →
+            </button>
+
+
+            <button
+                id="submitBtn"
+                type="button"
+                class="success hidden"
+            >
+                Шалгалт дуусгах ✓
+            </button>
+
+        </div>
+
+
+        <p
+            id="quizError"
+            class="error"
+        ></p>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESULT SCREEN
+    ========================== -->
+
+    <section
+        id="resultScreen"
+        class="hidden card result-card"
+    >
+
+        <div class="result-icon">
+            🎉
+        </div>
+
+
+        <h2>
+            Шалгалт амжилттай дууслаа!
+        </h2>
+
+
+        <p id="resultMessage"></p>
+
+
+
+        <div class="score-box">
+
+            <div class="score-label">
+                Таны оноо
+            </div>
+
+
+            <div
+                id="scoreText"
+                class="score"
+            >
+                0 / 10
+            </div>
+
+
+            <div
+                id="percentText"
+                class="percent"
+            >
+                0%
+            </div>
+
+        </div>
+
+
+
+        <div class="result-details">
+
+
+            <div>
+
+                <span>
+                    👤 Нэр
+                </span>
+
+                <strong id="resultName">
+                    -
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    🏫 Анги
+                </span>
+
+                <strong id="resultClass">
+                    -
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    ⏱ Хугацаа
+                </span>
+
+                <strong id="resultTime">
+                    00:00
+                </strong>
+
+            </div>
+
+
+
+            <div>
+
+                <span>
+                    📊 Үнэлгээ
+                </span>
+
+                <strong id="gradeText">
+                    -
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            type="button"
+            class="primary restart-btn"
+            onclick="location.reload()"
+        >
+            🔄 Дахин эхлэх
+        </button>
+
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    7-р ангийн Мэдээллийн технологийн онлайн шалгалт
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
