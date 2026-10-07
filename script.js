@@ -3,7 +3,7 @@
 // ==========================================
 
 const WEB_APP_URL =
-    "https://script.google.com/macros/s/AKfycbxp79A6cLrFEVuLE38mwMuXHkPtjyvrT4-IS2cxf0Ey2BYWKM7wxm4TdVszi3lOTJ31/exec";
+    "https://script.google.com/macros/s/AKfycbwTJBnhSE0E3SAZOeVU7BZeV_lptApfM_OXxfgcc9dExfWwmCmHznrn9nmlmxhUZSRd/exec";
 
 
 // ==========================================
